@@ -16,7 +16,7 @@ namespace DebuggerDisplayAttributeDemo
 
         private string DebuggerDisplay
         {
-            get { return string.Format($"{Id}: {Title} {Author}"); }
+            get { return $"{Id}: {Title} {Author}"; }
         }
 
         public Book(int id, string title, string author, int pages)
