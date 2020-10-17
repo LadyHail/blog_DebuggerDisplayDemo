@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace DebuggerDisplayAttributeDemo
 {
-    [DebuggerDisplay("{Id}; {Pages}", Name = "{Title} / {Author}")]
+    [DebuggerDisplay("{DebuggerDisplay,nq}")]
     public class Book
     {
         public int Id { get; set; }
@@ -14,6 +14,11 @@ namespace DebuggerDisplayAttributeDemo
 
         public int Pages { get; set; }
 
+        private string DebuggerDisplay
+        {
+            get { return string.Format($"{Id}: {Title} {Author}"); }
+        }
+
         public Book(int id, string title, string author, int pages)
         {
             Id = id;
@@ -23,7 +28,7 @@ namespace DebuggerDisplayAttributeDemo
         }
     }
 
-    [DebuggerDisplay("My count {Count}")]
+    [DebuggerDisplay("{Count} books")]
     public class Books : List<Book>
     {
     }
