@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace DebuggerDisplayAttributeDemo
 {
@@ -7,7 +6,7 @@ namespace DebuggerDisplayAttributeDemo
     {
         private static void Main(string[] args)
         {
-            var books = new List<Book>
+            var books = new Books
             {
                 new Book(0, "First", "A", 50),
                 new Book(1, "Second", "B", 100),

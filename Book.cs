@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace DebuggerDisplayAttributeDemo
 {
@@ -20,5 +21,10 @@ namespace DebuggerDisplayAttributeDemo
             Author = author;
             Pages = pages;
         }
+    }
+
+    [DebuggerDisplay("My count {Count}")]
+    public class Books : List<Book>
+    {
     }
 }
